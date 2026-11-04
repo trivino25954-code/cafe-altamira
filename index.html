@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Altamira · Cafés especiales del Eje Cafetero</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- ============================================================
+       TODO G1 (parte 1): el PRIMER elemento del body debe ser un enlace
+       "Saltar al contenido" con class="saltar" que lleve a #contenido.
+       ============================================================ -->
+
+  <!-- ============================================================
+       EJEMPLO RESUELTO 1 · Encabezado y navegación
+       - <header> es un landmark: el lector de pantalla lo anuncia como "banner".
+       - <nav> con aria-label distingue este menú de otros menús de la página.
+       - Los enlaces van en una lista <ul>: el lector anuncia "lista, 4 elementos".
+       ============================================================ -->
+  <header class="encabezado">
+    <a class="logo" href="index.html">
+      <img src="img/grano.svg" alt="" width="28" height="28">
+      Café Altamira
+    </a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="#cafes">Cafés</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#suscripcion">Suscripción</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- TODO G1 (parte 2): este div es el contenido principal.
+       Conviértelo en <main id="contenido"> (y cierra con </main>). -->
+  <div class="contenido">
+
+    <!-- TODO G1 (parte 3): el título de la portada es un div con letra grande.
+         Debe ser el ÚNICO <h1> de la página. -->
+    <div class="hero">
+      <div class="titulo-grande">Café Altamira</div>
+      <p>Cafés especiales cultivados a 1.800 metros en las montañas de Risaralda.</p>
+      <a class="boton" href="#cafes">Ver nuestros cafés</a>
+    </div>
+
+    <!-- ============================================================
+         TODO G2 · Catálogo
+         - El contenedor debe ser <section id="cafes"> con un <h2>.
+         - Cada producto debe ser un <article> con el nombre en <h3>.
+         - Cada imagen necesita un alt que describa el producto (no el nombre del archivo).
+         ============================================================ -->
+    <div class="seccion" id="cafes">
+      <div class="subtitulo">Nuestros cafés</div>
+      <div class="productos">
+        <div class="producto">
+          <img src="img/cafe-clasico.svg" width="300" height="220">
+          <div class="nombre">Altamira Clásico</div>
+          <p>Origen: Santuario, Risaralda · Notas: chocolate y panela.</p>
+          <p class="precio">$32.000 · 500 g</p>
+        </div>
+        <div class="producto">
+          <img src="img/cafe-geisha.svg" width="300" height="220">
+          <div class="nombre">Geisha de Altura</div>
+          <p>Origen: Apía, Risaralda · Notas: jazmín y durazno.</p>
+          <p class="precio">$58.000 · 250 g</p>
+        </div>
+        <div class="producto">
+          <img src="img/cafe-honey.svg" width="300" height="220">
+          <div class="nombre">Honey La Esmeralda</div>
+          <p>Origen: Belén de Umbría · Notas: miel y frutos rojos.</p>
+          <p class="precio">$41.000 · 500 g</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         EJEMPLO RESUELTO 2 · Sección con figura
+         - aria-labelledby une la sección con su título: el lector la anuncia
+           como "región, Nuestra historia".
+         - <figure> + <figcaption> asocian la imagen con su pie de foto.
+         - El alt describe lo que se VE; el figcaption agrega contexto.
+         ============================================================ -->
+    <section id="historia" class="seccion" aria-labelledby="historia-titulo">
+      <h2 id="historia-titulo">Nuestra historia</h2>
+      <figure class="figura">
+        <img src="img/finca.svg" width="600" height="300"
+             alt="Casa de la finca con techo rojo entre montañas verdes cubiertas de cafetales">
+        <figcaption>Finca Altamira, vereda La Esmeralda, Santuario (Risaralda).</figcaption>
+      </figure>
+      <p>Desde 1987 la familia Restrepo cultiva café de forma sostenible. Hoy tostamos
+        en pequeños lotes para que cada bolsa conserve el sabor de su origen.</p>
+    </section>
+
+    <!-- ============================================================
+         TODO G3 · Suscripción
+         - Usa <section id="suscripcion"> con un <h2> y un <form> real.
+         - El campo de correo necesita: <label for="...">, type="email", id y required.
+         - El "botón" es un div con onclick: cámbialo por <button type="submit">.
+         ============================================================ -->
+    <div class="seccion" id="suscripcion">
+      <div class="subtitulo">Recibe nuestras novedades</div>
+      <div class="formulario">
+        <input type="text" placeholder="Tu correo">
+        <div class="boton" onclick="alert('¡Gracias!')">Suscribirme</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       TODO G4 · Pie de página
+       - El contenedor debe ser <footer>.
+       - La dirección y el teléfono van dentro de <address>.
+       - El horario es una tabla de datos: <table> con <caption>,
+         y celdas de encabezado <th scope="col"> / <th scope="row">.
+       ============================================================ -->
+  <div class="pie">
+    <div>
+      <div class="pie-titulo">Visítanos</div>
+      <div>Carrera 7 # 12-45, Santuario, Risaralda</div>
+      <div>Tel. 606 368 0000</div>
+    </div>
+    <div>
+      <div class="pie-titulo">Horario</div>
+      <div>Lunes a viernes: 8:00 a. m. – 6:00 p. m.</div>
+      <div>Sábados: 9:00 a. m. – 2:00 p. m.</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ===== Café Altamira · estilos base ===== */
+:root {
+  --cafe: #6b3e26;
+  --cafe-oscuro: #3b2216;
+  --verde: #2f5d3a;
+  --crema: #fff8ee;
+  --texto: #2b2420;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background: #ffffff;
+  line-height: 1.6;
+}
+
+/* TODO G1 (parte 4): esta regla esconde el foco y deja sin guía a quien
+   navega con teclado. Bórrala y agrega una regla :focus-visible con un
+   outline visible (por ejemplo 3px solid). */
+*:focus { outline: none; }
+
+/* Enlace "Saltar al contenido": oculto hasta que recibe el foco */
+.saltar {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: .5rem 1rem;
+  background: var(--cafe-oscuro);
+  color: #fff;
+  z-index: 10;
+}
+.saltar:focus { top: 1rem; }
+
+/* ----- Encabezado ----- */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--cafe-oscuro);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu a { color: #fff; text-decoration: none; }
+.menu a:hover,
+.menu a[aria-current="page"] { text-decoration: underline; }
+
+/* ----- Portada ----- */
+.hero {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: var(--verde);
+  color: #fff;
+}
+.hero h1,
+.titulo-grande {
+  margin: 0 0 .5rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 800;
+}
+.boton {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  border: 0;
+  border-radius: .5rem;
+  background: var(--crema);
+  color: var(--cafe-oscuro);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ----- Secciones ----- */
+.seccion {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.seccion h2,
+.subtitulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+  color: var(--cafe-oscuro);
+}
+
+/* ----- Catálogo ----- */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.producto {
+  padding: 1rem;
+  border: 1px solid #e6dccf;
+  border-radius: .75rem;
+  background: #fff;
+}
+.producto img { width: 100%; height: auto; border-radius: .5rem; }
+.producto h3,
+.nombre { font-size: 1.2rem; font-weight: 700; margin: .75rem 0 .25rem; }
+
+/* TODO G2 (parte 4): este color tiene un contraste de 2.7:1 sobre blanco.
+   WCAG AA pide 4.5:1. Cámbialo por uno más oscuro (por ejemplo var(--cafe)). */
+.precio {
+  font-weight: 700;
+  color: #b59a7e;
+}
+
+/* ----- Historia ----- */
+.figura { margin: 0 0 1rem; }
+.figura img { width: 100%; height: auto; border-radius: .75rem; }
+.figura figcaption { font-size: .9rem; color: #5c534d; margin-top: .5rem; }
+
+/* ----- Suscripción ----- */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: flex-end;
+}
+.formulario label { display: block; font-weight: 600; margin-bottom: .25rem; }
+.formulario input {
+  padding: .7rem 1rem;
+  min-width: 260px;
+  border: 2px solid #8a7a6d;
+  border-radius: .5rem;
+  font: inherit;
+}
+.formulario .boton { background: var(--cafe); color: #fff; }
+
+/* ----- Pie ----- */
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2.5rem 2rem;
+  background: var(--cafe-oscuro);
+  color: #fff;
+}
+.pie h2,
+.pie-titulo { font-size: 1.1rem; font-weight: 700; margin: 0 0 .5rem; }
+.pie address { font-style: normal; }
+.pie a { color: #fff; }
+.pie table { border-collapse: collapse; }
+.pie caption { text-align: left; font-weight: 700; margin-bottom: .5rem; }
+.pie th,
+.pie td { text-align: left; padding: .25rem 1rem .25rem 0; }
