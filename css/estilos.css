@@ -20,7 +20,10 @@ body {
 /* TODO G1 (parte 4): esta regla esconde el foco y deja sin guía a quien
    navega con teclado. Bórrala y agrega una regla :focus-visible con un
    outline visible (por ejemplo 3px solid). */
-*:focus { outline: none; }
+:focus-visible {
+  outline: 3px solid #7c2d12;
+  outline-offset: 2px;
+}
 
 /* Enlace "Saltar al contenido": oculto hasta que recibe el foco */
 .saltar {
