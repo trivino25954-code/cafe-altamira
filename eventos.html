@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos · Café Altamira</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a href="#contenido" class="saltar">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <a class="logo" href="index.html">
+      <img src="img/grano.svg" alt="" width="28" height="28">
+      Café Altamira
+    </a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="index.html#cafes">Cafés</a></li>
+        <li><a href="index.html#historia">Historia</a></li>
+        <li><a href="index.html#suscripcion">Suscripción</a></li>
+        <li><a href="eventos.html" aria-current="page">Eventos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-eventos" aria-labelledby="titulo-eventos">
+      <h1 id="titulo-eventos" class="titulo-grande">Catas y encuentros</h1>
+      <p>Disfruta experiencias sensoriales con cafés especiales, historia del origen y una taza preparada con precisión.</p>
+    </section>
+
+    <section class="seccion" aria-labelledby="eventos-titulo">
+      <h2 id="eventos-titulo">Próximas catas</h2>
+      <div class="productos">
+        <article class="evento">
+          <img src="img/cafe-clasico.svg" alt="Taza de café servido junto a granos y cuchara sobre una mesa" width="300" height="220">
+          <h3>Cata de origen</h3>
+          <p><time datetime="2026-11-20T16:00">20 nov 2026 · 4:00 p. m.</time></p>
+          <ul>
+            <li>8 cupos disponibles</li>
+            <li>Precio: $65.000</li>
+          </ul>
+        </article>
+
+        <article class="evento">
+          <img src="img/cafe-geisha.svg" alt="Bolsa de café y taza preparada con aroma floral sobre una mesa rústica" width="300" height="220">
+          <h3>Perfumes florales</h3>
+          <p><time datetime="2026-11-27T18:30">27 nov 2026 · 6:30 p. m.</time></p>
+          <ul>
+            <li>6 cupos disponibles</li>
+            <li>Precio: $78.000</li>
+          </ul>
+        </article>
+
+        <article class="evento">
+          <img src="img/finca.svg" alt="Finca en medio de montañas verdes con cafetales y casas de techo rojo" width="300" height="220">
+          <h3>Recorrido por la finca</h3>
+          <p><time datetime="2026-12-04T10:00">4 dic 2026 · 10:00 a. m.</time></p>
+          <ul>
+            <li>10 cupos disponibles</li>
+            <li>Precio: $90.000</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="inscripcion-titulo">
+      <h2 id="inscripcion-titulo">Inscríbete</h2>
+      <form class="formulario evento-form">
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required>
+        </div>
+
+        <div class="campo">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" required>
+        </div>
+
+        <fieldset>
+          <legend>Selecciona la cata</legend>
+          <label><input type="radio" name="cata" value="Origen" required> Cata de origen</label>
+          <label><input type="radio" name="cata" value="Florales"> Perfumes florales</label>
+          <label><input type="radio" name="cata" value="Finca"> Recorrido por la finca</label>
+        </fieldset>
+
+        <div class="check">
+          <input id="datos" type="checkbox" required>
+          <label for="datos">Acepto el tratamiento de datos</label>
+        </div>
+
+        <button class="boton" type="submit">Reservar mi cupo</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div>
+      <h2 class="pie-titulo">Visítanos</h2>
+      <address>
+        Carrera 7 # 12-45, Santuario, Risaralda<br>
+        Tel. 606 368 0000
+      </address>
+    </div>
+    <div>
+      <h2 class="pie-titulo">Horario</h2>
+      <table>
+        <caption>Horario de atención</caption>
+        <tr>
+          <th scope="row">Lunes a viernes</th>
+          <td>8:00 a. m. – 6:00 p. m.</td>
+        </tr>
+        <tr>
+          <th scope="row">Sábados</th>
+          <td>9:00 a. m. – 2:00 p. m.</td>
+        </tr>
+      </table>
+    </div>
+  </footer>
+</body>
+</html>
