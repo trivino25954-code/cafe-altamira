@@ -121,14 +121,13 @@ body {
   background: #fff;
 }
 .producto img { width: 100%; height: auto; border-radius: .5rem; }
-.producto h3,
-.nombre { font-size: 1.2rem; font-weight: 700; margin: .75rem 0 .25rem; }
+.producto h3 { font-size: 1.2rem; font-weight: 700; margin: .75rem 0 .25rem; }
 
 /* TODO G2 (parte 4): este color tiene un contraste de 2.7:1 sobre blanco.
    WCAG AA pide 4.5:1. Cámbialo por uno más oscuro (por ejemplo var(--cafe)). */
 .precio {
   font-weight: 700;
-  color: #b59a7e;
+  color: var(--cafe);
 }
 
 /* ----- Historia ----- */

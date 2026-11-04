@@ -34,55 +34,37 @@
     </nav>
   </header>
 
-  <!-- TODO G1 (parte 2): este div es el contenido principal.
-       Conviértelo en <main id="contenido"> (y cierra con </main>). -->
   <main id="contenido">
-
-    <!-- TODO G1 (parte 3): el título de la portada es un div con letra grande.
-         Debe ser el ÚNICO <h1> de la página. -->
-    <div class="hero">
-      <div class="titulo-grande">Café Altamira</div>
+    <section class="hero" aria-labelledby="titulo-principal">
+      <h1 id="titulo-principal" class="titulo-grande">Café Altamira</h1>
       <p>Cafés especiales cultivados a 1.800 metros en las montañas de Risaralda.</p>
       <a class="boton" href="#cafes">Ver nuestros cafés</a>
-    </div>
+    </section>
 
-    <!-- ============================================================
-         TODO G2 · Catálogo
-         - El contenedor debe ser <section id="cafes"> con un <h2>.
-         - Cada producto debe ser un <article> con el nombre en <h3>.
-         - Cada imagen necesita un alt que describa el producto (no el nombre del archivo).
-         ============================================================ -->
-    <div class="seccion" id="cafes">
-      <div class="subtitulo">Nuestros cafés</div>
+    <section class="seccion" id="cafes" aria-labelledby="cafes-titulo">
+      <h2 id="cafes-titulo">Nuestros cafés</h2>
       <div class="productos">
-        <div class="producto">
-          <img src="img/cafe-clasico.svg" width="300" height="220">
-          <div class="nombre">Altamira Clásico</div>
+        <article class="producto">
+          <img src="img/cafe-clasico.svg" alt="Bolsa de café Altamira Clásico de 500 gramos" width="300" height="220">
+          <h3>Altamira Clásico</h3>
           <p>Origen: Santuario, Risaralda · Notas: chocolate y panela.</p>
           <p class="precio">$32.000 · 500 g</p>
-        </div>
-        <div class="producto">
-          <img src="img/cafe-geisha.svg" width="300" height="220">
-          <div class="nombre">Geisha de Altura</div>
+        </article>
+        <article class="producto">
+          <img src="img/cafe-geisha.svg" alt="Bolsa de café Geisha de Altura de 250 gramos" width="300" height="220">
+          <h3>Geisha de Altura</h3>
           <p>Origen: Apía, Risaralda · Notas: jazmín y durazno.</p>
           <p class="precio">$58.000 · 250 g</p>
-        </div>
-        <div class="producto">
-          <img src="img/cafe-honey.svg" width="300" height="220">
-          <div class="nombre">Honey La Esmeralda</div>
+        </article>
+        <article class="producto">
+          <img src="img/cafe-honey.svg" alt="Bolsa de café Honey La Esmeralda de 500 gramos" width="300" height="220">
+          <h3>Honey La Esmeralda</h3>
           <p>Origen: Belén de Umbría · Notas: miel y frutos rojos.</p>
           <p class="precio">$41.000 · 500 g</p>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
 
-    <!-- ============================================================
-         EJEMPLO RESUELTO 2 · Sección con figura
-         - aria-labelledby une la sección con su título: el lector la anuncia
-           como "región, Nuestra historia".
-         - <figure> + <figcaption> asocian la imagen con su pie de foto.
-         - El alt describe lo que se VE; el figcaption agrega contexto.
-         ============================================================ -->
     <section id="historia" class="seccion" aria-labelledby="historia-titulo">
       <h2 id="historia-titulo">Nuestra historia</h2>
       <figure class="figura">
@@ -94,21 +76,18 @@
         en pequeños lotes para que cada bolsa conserve el sabor de su origen.</p>
     </section>
 
-    <!-- ============================================================
-         TODO G3 · Suscripción
-         - Usa <section id="suscripcion"> con un <h2> y un <form> real.
-         - El campo de correo necesita: <label for="...">, type="email", id y required.
-         - El "botón" es un div con onclick: cámbialo por <button type="submit">.
-         ============================================================ -->
-    <div class="seccion" id="suscripcion">
-      <div class="subtitulo">Recibe nuestras novedades</div>
-      <div class="formulario">
-        <input type="text" placeholder="Tu correo">
-        <div class="boton" onclick="alert('¡Gracias!')">Suscribirme</div>
-      </div>
-    </div>
+    <section class="seccion" id="suscripcion" aria-labelledby="suscripcion-titulo">
+      <h2 id="suscripcion-titulo">Recibe nuestras novedades</h2>
+      <form class="formulario">
+        <div>
+          <label for="correo">Correo</label>
+          <input id="correo" type="email" placeholder="Tu correo" required>
+        </div>
+        <button class="boton" type="submit">Suscribirme</button>
+      </form>
+    </section>
 
-  </div>
+  </main>
 
   <!-- ============================================================
        TODO G4 · Pie de página
@@ -117,17 +96,28 @@
        - El horario es una tabla de datos: <table> con <caption>,
          y celdas de encabezado <th scope="col"> / <th scope="row">.
        ============================================================ -->
-  <div class="pie">
+  <footer class="pie">
     <div>
-      <div class="pie-titulo">Visítanos</div>
-      <div>Carrera 7 # 12-45, Santuario, Risaralda</div>
-      <div>Tel. 606 368 0000</div>
+      <h2 class="pie-titulo">Visítanos</h2>
+      <address>
+        Carrera 7 # 12-45, Santuario, Risaralda<br>
+        Tel. 606 368 0000
+      </address>
     </div>
     <div>
-      <div class="pie-titulo">Horario</div>
-      <div>Lunes a viernes: 8:00 a. m. – 6:00 p. m.</div>
-      <div>Sábados: 9:00 a. m. – 2:00 p. m.</div>
+      <h2 class="pie-titulo">Horario</h2>
+      <table>
+        <caption>Horario de atención</caption>
+        <tr>
+          <th scope="row">Lunes a viernes</th>
+          <td>8:00 a. m. – 6:00 p. m.</td>
+        </tr>
+        <tr>
+          <th scope="row">Sábados</th>
+          <td>9:00 a. m. – 2:00 p. m.</td>
+        </tr>
+      </table>
     </div>
-  </div>
+  </footer>
 </body>
 </html>
