@@ -45,4 +45,9 @@ lista de verificación y demuestras que se cumple.
 
 ## Mi lista de verificación
 
-<!-- Escribe aquí tus 5 o más verificaciones -->
+- [x] Dado que estoy en la página de inicio, cuando hago clic en "Eventos", entonces navego a la página de eventos.
+- [x] Dado que estoy en la página de eventos, cuando veo el menú principal, entonces el enlace de la página actual está marcado con aria-current="page".
+- [x] Dado que reviso la estructura de la página, cuando cuento los encabezados, entonces solo hay un único h1 y no hay saltos de nivel.
+- [x] Dado que miro las tres catas, cuando las verifico, entonces cada una está en un article con su h3 y fecha en time datetime.
+- [x] Dado que abro el formulario, cuando reviso los campos, entonces nombre, correo, radio de cata, checkbox y botón aparecen con labels y required.
+- [x] Dado que reviso la accesibilidad, cuando navego con teclado, entonces el primer foco es el enlace "Saltar al contenido" y el formulario es operable.
